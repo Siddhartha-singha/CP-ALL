@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string reaction;
+    cout << "Enter a Facebook reaction: ";
+    cin >> reaction;
+
+    if (reaction == "Like") {
+        cout << "(y)" << endl;
+    } else if (reaction == "Love") {
+        cout << "<3" << endl;
+    } else if (reaction == "Care") {
+        cout << "^<3^" << endl;
+    } else if (reaction == "Haha") {
+        cout << ":p" << endl;
+    } else if (reaction == "Wow") {
+        cout << ":O" << endl;
+    } else if (reaction == "Sad") {
+        cout << ":'(" << endl;
+    } else if (reaction == "Angry") {
+        cout << ">_<" << endl;
+    } else {
+        cout << "Oops! That's not a valid reaction." << endl;
+    }
+
+    return 0;
+}
