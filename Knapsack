@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define f first
+#define s second
+#define vlong vector<long long>
+#define vp vector<pair<int,int>>
+#define rep(i,a,b) for(int i=a; i<b; i++)
+
+int main()
+{
+    int N, S;
+    cin >> N >> S;
+    vp items(N);
+    rep(i,0,N) {
+        cin >> items[i].f >> items[i].s; 
+    }
+    vlong dp(S + 1, 0); 
+    rep(i,0,N) {
+        int wi = items[i].f;
+        int ci = items[i].s;  
+
+        for (int w = wi; w <= S; ++w) {
+            dp[w] = max(dp[w], dp[w - wi] + ci);
+         }
+    }
+    cout << dp[S] << endl;
+    return 0;
+}
