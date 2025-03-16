@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+#include <string>
+#include <algorithm>
+#define v vector<int>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    sort(s.begin(), s.end());
+    
+    string result= " ";
+    for(char ch :s){
+        if(ch != '+'){
+            result= result+ch;
+            result= result +'+';
+        }
+    }
+     result.pop_back();
+    cout<< result<< endl;
+
+    return 0; 
+}
