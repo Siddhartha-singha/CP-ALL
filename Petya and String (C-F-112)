@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+#include <string>
+#include <cctype>  // convert uppercase <-> lowercase
+using namespace std;
+
+#define f firstWord
+#define s secondWord
+
+int main(){
+    string f,s;
+    cin>> f>> s;
+    
+    for(char &ch : f) ch = tolower(ch);
+    for(char &ch : s) ch = tolower(ch); // (first condition upperletters to lowerletters)
+    if (f > s)
+      cout<< "1" << endl;
+    else if (f< s)
+    cout<< "-1"<< endl;
+    else 
+    cout<< "0" << endl;
+    
+    return 0;
+}
